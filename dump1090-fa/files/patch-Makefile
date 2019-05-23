@@ -1,0 +1,14 @@
+--- Makefile.orig	2019-05-03 16:43:40 UTC
++++ Makefile
+@@ -22,9 +22,9 @@ ifeq ($(RTLSDR), yes)
+   endif
+ 
+   ifeq ($(STATIC), yes)
+-    LIBS_SDR += -Wl,-Bstatic -lrtlsdr -Wl,-Bdynamic -lusb-1.0
++    LIBS_SDR += -Wl,-Bstatic -lrtlsdr -Wl,-Bdynamic -lusb
+   else
+-    LIBS_SDR += -lrtlsdr -lusb-1.0
++    LIBS_SDR += -lrtlsdr -lusb
+   endif
+ endif
+ 
